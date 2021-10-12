@@ -12,7 +12,7 @@ Make sure to provide values for the following in app.py.
 #ACS Endpoint
 endpoint = 'https://<acs-name>.communication.azure.com/'
 #Function App Endpoint for Token 
-tokenendpoint = 'https://<functionapp-name>.azurewebsite.net/api/UserTokenChat?code='
+tokenendpoint = 'https://<functionapp-name>.azurewebsite.net/api/<function-name>?code='
 #Function Key for Token Endpoint
 functionkey = '<functionkey>'
 ```
@@ -26,5 +26,7 @@ This code assumes your Identity Provider will return identity information as the
 ```
 You can refer to this document for creating an Identity Provider.  
 <br>
-Quickstart: Create and manage access tokens  https://docs.microsoft.com/en-us/azure/communication-services/quickstarts/access-tokens?pivots=programming-language-python
+Quickstart: Create and manage access tokens 
+<br>
+https://docs.microsoft.com/en-us/azure/communication-services/quickstarts/access-tokens?pivots=programming-language-python
 
