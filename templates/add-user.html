@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+      <h1>Add User to Thread</h1>
+      <p>Current UserID: {{userid}}</p>
+      <p>Token: {{token}}</p>
+
+      <form action="{{ url_for('adduser') }}" method="POST">
+            <label for="user_id">User ID :</label><br> 
+            <input type="text" name="user_id"><br>
+
+            <label for="display_name">Display Name:</label><br> 
+            <input type="text" name="display_name" value='Contoso'><br>
+
+            <label for="thread_id">Thread ID:</label><br> 
+            <input type="text" name="thread_id"><br><br>
+
+            <input type="submit" value="Submit">
+      </form>
+      <br>
+      <br>
+      <a href="{{ url_for('index') }}">Return to Index</a>
+  </body>
+</html>

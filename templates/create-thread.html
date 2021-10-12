@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+      <h1>Create Thread</h1>
+      <p>Current UserID: {{userid}}</p>
+      <p>Token: {{token}}</p>
+
+      <form action="{{ url_for('createthread') }}" method="POST">
+            <label for="topic">Topic:</label><br> 
+            <input type="text" name="topic" value='test-topic'><br><br>
+            <input type="submit" value="Submit">
+      </form>
+      <br>
+      <br>
+      <a href="{{ url_for('index') }}">Return to Index</a>
+  </body>
+</html>

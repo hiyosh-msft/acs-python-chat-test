@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+      <h1>Create or Set Identity</h1>
+      <p>
+        Input User_ID (8:acs:xxxx) if returning user. <br>
+        Submit empty if new user.
+      </p>
+
+      <form action="{{ url_for('setidentity') }}" method="POST">
+        <input type="radio" name="user_type" value="new_user"> New User </input><br>
+        <input type="radio" name="user_type" value="returning_user"> Returning User </input><br><br>
+
+        <label for="user_id">User ID : </label><br> 
+        <input type="text" name="user_id" value="user id"><br><br>
+
+        <input type="submit" value="Submit">
+      </form>
+      <br>
+      <br>
+      <a href="{{ url_for('index') }}">Return to Index</a>
+      
+  </body>
+</html>

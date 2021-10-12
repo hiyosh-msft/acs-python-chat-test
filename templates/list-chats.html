@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      </style>
+  </head>
+  <body>
+      <h1>Messages</h1>
+      <p>Current UserID: {{userid}}</p>
+      <p>Token: {{token}}</p>
+      <p>Thread ID: {{thread_id}}</p>
+
+      <form action="{{ url_for('listchats') }}" method="POST">
+        <label for="thread_id">Thread ID:</label>
+        <input type="text" name="thread_id"><br><br>
+        <input type="submit" value="Submit">
+      </form>
+      <br>
+      <br>
+      <table>
+        <tr>
+          <th>Date</th>
+          <th>Display Name</th>
+          <th>Content</th>
+          <th>ID</th>
+        </tr>
+        {% for chat_message in chat_messages: %}
+          <tr>
+            <td>{{chat_message.created_on}}</td>
+            <td>{{chat_message.sender_display_name}}</td>
+            <td>{{chat_message.content.message}}</td>
+            <td>{{chat_message.id}}</td>
+          </tr>
+        {% endfor %}
+      </table>
+      <br>
+      <br>
+      <a href="{{ url_for('index') }}">Return to Index</a>
+  </body>
+</html>

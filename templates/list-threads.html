@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        </style>
+  </head>
+  <body>
+      <h1>Threads</h1>
+      <p>Current UserID: {{userid}}</p>
+      <p>Token: {{token}}</p>
+      
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Topic</th>
+        </tr>
+        {% for chat_thread in chat_threads: %}
+          <tr>
+            <td>{{chat_thread.id}}</td>
+            <td>{{chat_thread.topic}}</td>
+          </tr>
+        {% endfor %}
+      </table>
+      <br>
+      <br>
+      <a href="{{ url_for('index') }}">Return to Index</a>
+  </body>
+</html>

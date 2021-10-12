@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+      <h1>Message Form</h1>
+      <p>Current UserID: {{userid}}</p>
+      <p>Token: {{token}}</p>
+      <p> {{error}}</p>
+      <p>Message</p>
+      <form action="{{ url_for('sendchat') }}" method="POST">
+            <label for="thread_id">Thread Id:</label><br> 
+            <input type="text" name="thread_id"><br><br>
+
+            <label for="display_name">Display Name:</label><br>
+            <input type="text" name="display_name"><br><br>
+
+            <label for="content">Content:</label><br>
+            <input type="text" name="content"><br><br>
+
+            <input type="submit" value="Submit">
+      </form>
+      <br>
+      <br>
+      <a href="{{ url_for('index') }}">Return to Index</a>
+  </body>
+</html>

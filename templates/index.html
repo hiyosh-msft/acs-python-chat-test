@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+      <h1>Simple ACS Chat App For Testing</h1>
+
+      <ul>
+        <li><a href="{{ url_for('setidentity') }}">Login</a></li>
+        <li><a href="{{ url_for('createthread') }}">Create Chat Thread</a></li>
+        <li><a href="{{ url_for('listthreads') }}">List Chat Threads</a></li>
+        <li><a href="{{ url_for('sendchat') }}">Send Message to a Chat Thread</a></li>
+        <li><a href="{{ url_for('listchats') }}">List Messages in a Chat Thread</a></li>
+        <li><a href="{{ url_for('adduser') }}">Add a Participant to a Chat Thread</a></li>
+        <li><a href="{{ url_for('listusers') }}">List Participants in a Chat Thread</a></li>
+      </ul>
+      
+  </body>
+</html>
